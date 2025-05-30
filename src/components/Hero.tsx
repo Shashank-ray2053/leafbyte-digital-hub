@@ -36,14 +36,14 @@ const Hero = () => {
           <div className="fade-in-up">
             <h1 className="text-6xl md:text-8xl font-bold mb-8 animate-gradient">
               <span className="bg-gradient-to-r from-green-700 via-emerald-600 to-lime-600 bg-clip-text text-transparent animate-gradient">
-                Powering
+                Global Technology
               </span>
               <br />
-              <span className="bg-gradient-to-r from-green-800 via-emerald-800 to-lime-800 bg-clip-text text-transparent">Digital Evolution</span>
+              <span className="bg-gradient-to-r from-green-800 via-emerald-800 to-lime-800 bg-clip-text text-transparent">Solutions Partner</span>
             </h1>
             
             <p className="text-2xl md:text-3xl text-green-700 mb-10 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
-              Transform your business with cutting-edge software development, DevOps solutions, and comprehensive IT infrastructure management.
+              Empowering enterprises worldwide with innovative software solutions, advanced cybersecurity, and strategic technology consulting services.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-stagger-in">
@@ -52,7 +52,7 @@ const Hero = () => {
                 onClick={openModal}
                 className="bg-gradient-to-r from-green-600 via-emerald-600 to-lime-600 hover:from-green-700 hover:via-emerald-700 hover:to-lime-700 text-white px-10 py-4 text-xl font-bold rounded-xl transition-all duration-500 transform hover:scale-110 shadow-2xl hover:shadow-3xl animate-pulse hover:animate-none border-2 border-green-400/50"
               >
-                Get in Touch
+                Start Your Digital Transformation
               </Button>
               <Button 
                 variant="outline" 
@@ -60,7 +60,7 @@ const Hero = () => {
                 onClick={handleViewServices}
                 className="border-3 border-green-600 text-green-700 hover:bg-gradient-to-r hover:from-green-600 hover:via-emerald-600 hover:to-lime-600 hover:text-white px-10 py-4 text-xl font-bold rounded-xl transition-all duration-500 transform hover:scale-110 shadow-xl hover:shadow-2xl bg-white/80 backdrop-blur-sm"
               >
-                View Our Services
+                Explore Our Capabilities
               </Button>
             </div>
           </div>

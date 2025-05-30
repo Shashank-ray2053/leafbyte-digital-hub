@@ -5,23 +5,23 @@ import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const values = [
     {
-      title: 'Innovation',
-      description: 'We embrace cutting-edge technologies to deliver forward-thinking solutions.',
-      icon: '💡'
+      title: 'Global Excellence',
+      description: 'Delivering world-class technology solutions that meet international standards and best practices.',
+      icon: '🌍'
     },
     {
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do, ensuring exceptional results.',
-      icon: '⭐'
+      title: 'Innovation Leadership',
+      description: 'Pioneering cutting-edge technologies to drive digital transformation across industries.',
+      icon: '🚀'
     },
     {
-      title: 'Partnership',
-      description: 'We build lasting relationships with our clients, working together towards success.',
+      title: 'Strategic Partnership',
+      description: 'Building long-term relationships with enterprises to achieve sustainable competitive advantage.',
       icon: '🤝'
     },
     {
-      title: 'Growth',
-      description: 'We are committed to continuous learning and helping our clients grow.',
+      title: 'Continuous Growth',
+      description: 'Committed to continuous improvement and helping organizations scale in the digital economy.',
       icon: '📈'
     }
   ];
@@ -33,9 +33,10 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">About Leafbyte Technology</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              At Leafbyte Technology, we are passionate about transforming businesses through innovative technology solutions. 
-              With years of experience in software development, DevOps, and IT infrastructure management, we help organizations 
-              navigate the digital landscape with confidence.
+              Leafbyte Technology is a premier global technology consulting firm specializing in enterprise-grade 
+              software development, cybersecurity solutions, and digital infrastructure management. With a proven 
+              track record of delivering transformative technology solutions, we partner with organizations worldwide 
+              to accelerate their digital evolution and achieve sustainable competitive advantage.
             </p>
           </div>
 
@@ -43,21 +44,21 @@ const About = () => {
             <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To empower businesses with cutting-edge technology solutions that drive innovation, 
-                efficiency, and sustainable growth in an ever-evolving digital world.
+                To enable global enterprises to thrive in the digital age through innovative technology solutions, 
+                strategic consulting, and uncompromising commitment to excellence and security.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                To be the leading technology partner that businesses trust to transform their digital 
-                infrastructure and achieve their strategic objectives through innovative solutions.
+                To be the world's most trusted technology partner, recognized for delivering transformative 
+                solutions that drive innovation, enhance security, and create lasting value for businesses globally.
               </p>
             </div>
           </div>
 
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-8">Our Values</h3>
+            <h3 className="text-3xl font-semibold text-gray-800 mb-8">Our Core Values</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

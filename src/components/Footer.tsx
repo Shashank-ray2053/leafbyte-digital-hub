@@ -1,13 +1,14 @@
+
 import React from 'react';
 
 const Footer = () => {
   const services = [
-    { name: 'Software Development', href: '#services' },
-    { name: 'DevOps Solutions', href: '#services' },
-    { name: 'Cloud Management', href: '#services' },
+    { name: 'Enterprise Software Development', href: '#services' },
+    { name: 'DevOps & Cloud Solutions', href: '#services' },
+    { name: 'Cloud Infrastructure Management', href: '#services' },
     { name: 'Cybersecurity Services', href: '#services' },
-    { name: 'IT Infrastructure', href: '#services' },
-    { name: 'Network Management', href: '#services' }
+    { name: 'IT Infrastructure Solutions', href: '#services' },
+    { name: 'Network Architecture & Security', href: '#services' }
   ];
 
   const company = [
@@ -39,8 +40,8 @@ const Footer = () => {
               Leafbyte Technology
             </h3>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Empowering businesses with innovative technology solutions. We transform ideas into 
-              scalable, secure, and efficient digital solutions that drive growth and success.
+              Your trusted global technology partner. We deliver enterprise-grade solutions that drive 
+              digital transformation, enhance cybersecurity, and enable sustainable growth for businesses worldwide.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -71,7 +72,7 @@ const Footer = () => {
           </div>
 
           <div className="animate-slide-in">
-            <h4 className="text-lg font-semibold mb-6 text-green-400">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-green-400">Enterprise Solutions</h4>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
@@ -106,7 +107,7 @@ const Footer = () => {
         <div className="border-t border-green-800/50 pt-8 mt-12 animate-fade-in">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Leafbyte Technology. All rights reserved.
+              © 2024 Leafbyte Technology. All rights reserved. Global Technology Solutions Partner.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <button
