@@ -6,6 +6,7 @@ const Footer = () => {
     { name: 'Software Development', href: '#services' },
     { name: 'DevOps Solutions', href: '#services' },
     { name: 'Cloud Management', href: '#services' },
+    { name: 'Cybersecurity Services', href: '#services' },
     { name: 'IT Infrastructure', href: '#services' },
     { name: 'Network Management', href: '#services' }
   ];

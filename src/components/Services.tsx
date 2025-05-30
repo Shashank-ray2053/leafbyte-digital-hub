@@ -76,6 +76,28 @@ const Services = () => {
       ]
     },
     {
+      title: 'Cybersecurity Services',
+      description: 'Comprehensive cybersecurity solutions to protect your business from evolving digital threats.',
+      icon: '🔐',
+      features: ['Security Audits & Assessments', 'Penetration Testing', 'Incident Response', 'Security Training'],
+      benefits: [
+        'Enhanced data protection',
+        'Regulatory compliance',
+        'Risk mitigation',
+        'Business continuity',
+        'Customer trust and confidence',
+        'Reduced cyber insurance costs'
+      ],
+      technologies: ['SIEM', 'Vulnerability Scanners', 'Firewall Management', 'Identity Management', 'Encryption', 'Zero Trust'],
+      process: [
+        'Security assessment and risk analysis',
+        'Security strategy development',
+        'Implementation of security controls',
+        'Continuous monitoring and threat detection',
+        'Incident response and recovery'
+      ]
+    },
+    {
       title: 'IT & Infrastructure Management',
       description: 'Comprehensive IT infrastructure management ensuring reliability, security, and scalability.',
       icon: '🏗️',
