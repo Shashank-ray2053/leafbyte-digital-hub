@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -14,7 +13,6 @@ const Footer = () => {
   const company = [
     { name: 'About Us', href: '#about' },
     { name: 'Our Team', href: '#about' },
-    { name: 'Careers', href: '#about' },
     { name: 'Blog', href: '#blog' },
     { name: 'Contact', href: '#home' }
   ];
