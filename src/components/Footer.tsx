@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer = () => {
@@ -40,7 +39,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                 alt="Leafbyte Technology" 
-                className="h-16 w-auto filter drop-shadow-lg"
+                className="h-40 w-auto filter drop-shadow-lg"
               />
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
