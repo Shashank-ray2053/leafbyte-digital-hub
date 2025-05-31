@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,6 +5,7 @@ import BlogPost from './BlogPost';
 
 const Blog = () => {
   const [selectedPost, setSelectedPost] = useState<any>(null);
+  const [showAllArticles, setShowAllArticles] = useState(false);
 
   const blogPosts = [
     {
@@ -49,66 +49,52 @@ The benefits of Zero Trust extend beyond improved security. Organizations report
     },
     {
       id: '2',
-      title: 'AI-Driven Threat Detection: Machine Learning in Cybersecurity',
-      excerpt: 'Explore how artificial intelligence and machine learning are transforming cybersecurity threat detection and response capabilities.',
-      content: `Artificial Intelligence and Machine Learning are revolutionizing cybersecurity by enabling organizations to detect and respond to threats with unprecedented speed and accuracy. As cyber attacks become more sophisticated, traditional signature-based detection methods are proving inadequate.
+      title: 'Digital Transformation Strategies for Global Enterprises',
+      excerpt: 'Explore comprehensive digital transformation approaches that drive sustainable growth and competitive advantage across diverse markets.',
+      content: `Digital transformation has evolved from a buzzword to a business imperative. In today's interconnected global economy, organizations must embrace digital technologies not just to remain competitive, but to survive and thrive in rapidly changing markets.
 
-**The Evolution of Threat Detection**
+**Understanding Digital Transformation**
 
-Traditional cybersecurity relied heavily on known threat signatures and rule-based systems. While these methods were effective against known threats, they struggled with zero-day attacks and advanced persistent threats (APTs). AI-driven threat detection addresses these limitations by:
+Digital transformation goes beyond simply adopting new technologies. It represents a fundamental rethinking of how organizations operate, deliver value to customers, and compete in the marketplace. This transformation touches every aspect of business operations, from customer engagement and internal processes to business models and organizational culture.
 
-- Analyzing vast amounts of data in real-time
-- Identifying patterns and anomalies that humans might miss
-- Adapting to new and evolving threats automatically
-- Reducing false positives through intelligent correlation
+**Key Pillars of Successful Digital Transformation**
 
-**Key AI Technologies in Cybersecurity**
+**Customer-Centric Approach**: Modern digital transformation strategies place the customer at the center of all initiatives. This involves leveraging data analytics to understand customer behavior, preferences, and pain points, then designing digital experiences that exceed expectations across all touchpoints.
 
-**Machine Learning Algorithms**: Supervised learning models can classify known threats, while unsupervised learning identifies anomalous behavior patterns that may indicate new threats.
+**Data-Driven Decision Making**: Organizations successful in digital transformation harness the power of big data and advanced analytics to make informed decisions. This includes implementing robust data governance frameworks, investing in analytics capabilities, and fostering a culture of data-driven decision making.
 
-**Deep Learning**: Neural networks excel at pattern recognition in complex data sets, making them ideal for analyzing network traffic, user behavior, and system logs.
+**Agile Operations**: Digital transformation requires organizations to become more agile and responsive to market changes. This involves adopting agile methodologies, implementing DevOps practices, and creating cross-functional teams that can rapidly develop and deploy solutions.
 
-**Natural Language Processing (NLP)**: Helps analyze threat intelligence feeds, security reports, and even social media for emerging threat indicators.
+**Technology Integration**: Successful digital transformation involves integrating various technologies including cloud computing, artificial intelligence, IoT, and automation to create seamless, efficient operations that scale globally.
 
-**Behavioral Analytics**: AI systems establish baseline behaviors for users, devices, and applications, then flag deviations that could indicate compromise.
+**Cultural Change Management**: Perhaps the most critical aspect of digital transformation is managing organizational change. This includes upskilling employees, fostering innovation mindsets, and creating cultures that embrace continuous learning and adaptation.
 
-**Implementation Strategies**
+**Global Considerations for Digital Transformation**
 
-Successful AI-driven threat detection requires:
+**Regulatory Compliance**: Organizations operating globally must navigate complex regulatory landscapes, including data protection laws like GDPR, CCPA, and emerging regulations in various jurisdictions.
 
-1. **Data Quality**: High-quality, diverse datasets are essential for training effective AI models.
+**Cultural Sensitivity**: Digital solutions must be adapted to local cultures, languages, and business practices while maintaining consistency in core brand values and operational excellence.
 
-2. **Integration**: AI systems must integrate seamlessly with existing security infrastructure and workflows.
+**Infrastructure Variability**: Global organizations must account for varying levels of technological infrastructure and connectivity across different markets, designing solutions that work effectively in diverse environments.
 
-3. **Human Expertise**: AI augments rather than replaces human analysts, requiring skilled personnel to interpret results and make decisions.
+**Local Partnership Strategies**: Successful global digital transformation often involves partnering with local technology providers and consultants who understand regional nuances and can provide on-ground support.
 
-4. **Continuous Learning**: AI models must be regularly updated and retrained to address evolving threats.
+**Measuring Digital Transformation Success**
 
-**Real-World Applications**
+Key performance indicators for digital transformation include:
+- Customer satisfaction and engagement metrics
+- Operational efficiency improvements
+- Revenue growth from digital channels
+- Employee productivity and satisfaction
+- Time-to-market for new products and services
+- Return on digital investment
 
-- **Endpoint Detection and Response (EDR)**: AI analyzes endpoint behavior to detect malware, suspicious processes, and unauthorized access attempts.
-
-- **Network Security**: Machine learning algorithms monitor network traffic patterns to identify lateral movement, data exfiltration, and command-and-control communications.
-
-- **Email Security**: AI systems analyze email content, sender behavior, and metadata to detect phishing, business email compromise, and malware delivery attempts.
-
-- **Cloud Security**: AI monitors cloud environments for misconfigurations, unauthorized access, and abnormal resource usage patterns.
-
-**Challenges and Considerations**
-
-While AI offers significant advantages, organizations must address several challenges:
-
-- **Adversarial AI**: Attackers may attempt to poison training data or evade AI detection systems.
-- **Explainability**: AI decisions must be interpretable for compliance and forensic purposes.
-- **Privacy**: AI systems must respect data privacy regulations while maintaining effectiveness.
-- **Bias**: Training data bias can lead to discriminatory or ineffective detection capabilities.
-
-The future of cybersecurity lies in the intelligent combination of AI technologies with human expertise, creating adaptive defense systems capable of evolving with the threat landscape.`,
+The journey of digital transformation is continuous, requiring ongoing investment, adaptation, and innovation. Organizations that approach this transformation strategically, with clear vision and strong execution capabilities, position themselves for sustained success in the digital economy.`,
       date: '2024-01-18',
-      readTime: '10 min read',
-      category: 'Cybersecurity',
-      image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=400&fit=crop',
-      author: 'Dr. Michael Rodriguez'
+      readTime: '14 min read',
+      category: 'Digital Strategy',
+      image: 'https://images.unsplash.com/photo-1560472355-536de3962603?w=800&h=400&fit=crop',
+      author: 'Michael Rodriguez'
     },
     {
       id: '3',
@@ -440,6 +426,45 @@ As edge computing matures, it will become an integral part of most organizations
     }
   ];
 
+  const additionalPosts = [
+    {
+      id: '9',
+      title: 'Cloud Migration Strategies for Enterprise Success',
+      excerpt: 'A comprehensive guide to planning and executing successful cloud migrations that minimize risks and maximize business value.',
+      content: 'Cloud migration content...',
+      date: '2024-01-25',
+      readTime: '10 min read',
+      category: 'Cloud Strategy',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop',
+      author: 'David Kumar'
+    },
+    {
+      id: '10',
+      title: 'Cybersecurity Frameworks for Global Compliance',
+      excerpt: 'Navigate international cybersecurity regulations and implement frameworks that ensure compliance across multiple jurisdictions.',
+      content: 'Cybersecurity frameworks content...',
+      date: '2024-01-22',
+      readTime: '11 min read',
+      category: 'Compliance',
+      image: 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&h=400&fit=crop',
+      author: 'Elena Petrov'
+    },
+    {
+      id: '11',
+      title: 'AI-Powered Business Intelligence for Modern Enterprises',
+      excerpt: 'Leverage artificial intelligence to transform raw data into actionable business insights that drive strategic decision-making.',
+      content: 'AI-powered BI content...',
+      date: '2024-01-19',
+      readTime: '9 min read',
+      category: 'Business Intelligence',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
+      author: 'James Liu'
+    }
+  ];
+
+  const allPosts = [...blogPosts, ...additionalPosts];
+  const displayPosts = showAllArticles ? allPosts : blogPosts.slice(0, 6);
+
   if (selectedPost) {
     return <BlogPost post={selectedPost} onBack={() => setSelectedPost(null)} />;
   }
@@ -448,14 +473,19 @@ As edge computing matures, it will become an integral part of most organizations
     <section id="blog" className="py-20 bg-gradient-to-br from-green-50 via-emerald-50 to-lime-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-green-800 mb-4">Latest Tech Insights</h2>
+          <h2 className="text-4xl font-bold text-green-800 mb-4">
+            {showAllArticles ? 'All Tech Insights & Articles' : 'Latest Tech Insights'}
+          </h2>
           <p className="text-xl text-green-700 max-w-3xl mx-auto">
-            Stay updated with the latest trends, best practices, and insights from the world of technology and cybersecurity.
+            {showAllArticles 
+              ? 'Comprehensive collection of technology insights, industry trends, and expert analysis to help your business thrive in the digital age.'
+              : 'Stay updated with the latest trends, best practices, and insights from the world of technology and cybersecurity.'
+            }
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {blogPosts.map((post, index) => (
+          {displayPosts.map((post, index) => (
             <Card 
               key={post.id} 
               className="hover-scale bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden animate-stagger-in group cursor-pointer"
@@ -493,8 +523,12 @@ As edge computing matures, it will become an integral part of most organizations
         </div>
 
         <div className="text-center animate-fade-in">
-          <Button variant="outline" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white transform hover:scale-105 transition-all duration-300">
-            View All Articles
+          <Button 
+            variant="outline" 
+            className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white transform hover:scale-105 transition-all duration-300"
+            onClick={() => setShowAllArticles(!showAllArticles)}
+          >
+            {showAllArticles ? 'Show Featured Articles' : 'View All Articles'}
           </Button>
         </div>
       </div>

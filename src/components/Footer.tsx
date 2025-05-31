@@ -35,11 +35,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
-            <div className="flex items-center mb-4">
+            <div className="flex flex-col items-start mb-4">
               <img 
                 src="/lovable-uploads/e4c17fc9-b843-4261-aa22-2d49a1cf4a79.png" 
                 alt="Leafbyte Technology" 
-                className="h-12 w-auto mr-3 filter drop-shadow-lg"
+                className="h-12 w-auto filter drop-shadow-lg mb-3"
               />
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
