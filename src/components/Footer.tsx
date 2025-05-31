@@ -37,10 +37,11 @@ const Footer = () => {
           <div className="lg:col-span-2 animate-fade-in">
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
+                src="/lovable-uploads/e4c17fc9-b843-4261-aa22-2d49a1cf4a79.png" 
                 alt="Leafbyte Technology" 
-                className="h-40 w-auto filter drop-shadow-lg"
+                className="h-12 w-auto mr-3 filter drop-shadow-lg"
               />
+              <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Your trusted global technology partner. We deliver enterprise-grade solutions that drive 
