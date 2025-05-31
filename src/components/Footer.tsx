@@ -35,17 +35,19 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
-            <div className="flex flex-col items-start mb-4">
+            <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/e4c17fc9-b843-4261-aa22-2d49a1cf4a79.png" 
+                src="/lovable-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                 alt="Leafbyte Technology" 
-                className="h-12 w-auto filter drop-shadow-lg mb-3"
+                className="h-16 w-auto filter drop-shadow-lg mr-4"
               />
-              <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
+              <h2 className="text-3xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Your trusted global technology partner. We deliver enterprise-grade solutions that drive 
-              digital transformation, enhance cybersecurity, and enable sustainable growth for businesses worldwide.
+              Premier Technology Solutions Provider serving businesses from startups to Fortune 500 companies. 
+              We deliver cutting-edge digital transformation services, enterprise-grade security solutions, and 
+              scalable cloud infrastructure that drives measurable business growth and operational excellence 
+              across local and international markets.
             </p>
             <div className="flex space-x-4">
               <a 
