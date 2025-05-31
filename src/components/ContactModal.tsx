@@ -139,7 +139,7 @@ const ContactModal = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">Email Us</h3>
-                    <p className="text-sm text-gray-600">admin@leafbyte.tech</p>
+                    <p className="text-sm text-gray-600">admin@leafbyte.ltd</p>
                     <p className="text-sm text-gray-600">support@leafbyte.tech</p>
                   </div>
                 </div>
