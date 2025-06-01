@@ -94,6 +94,60 @@
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f7fee7 100%);
   }
+
+  /* Enhanced responsive design */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Responsive text scaling */
+  @screen xs {
+    .text-responsive-lg {
+      @apply text-2xl;
+    }
+    .text-responsive-xl {
+      @apply text-3xl;
+    }
+    .text-responsive-2xl {
+      @apply text-4xl;
+    }
+  }
+
+  @screen sm {
+    .text-responsive-lg {
+      @apply text-3xl;
+    }
+    .text-responsive-xl {
+      @apply text-4xl;
+    }
+    .text-responsive-2xl {
+      @apply text-5xl;
+    }
+  }
+
+  @screen md {
+    .text-responsive-lg {
+      @apply text-4xl;
+    }
+    .text-responsive-xl {
+      @apply text-5xl;
+    }
+    .text-responsive-2xl {
+      @apply text-6xl;
+    }
+  }
+
+  @screen lg {
+    .text-responsive-lg {
+      @apply text-5xl;
+    }
+    .text-responsive-xl {
+      @apply text-6xl;
+    }
+    .text-responsive-2xl {
+      @apply text-7xl;
+    }
+  }
 }
 
 @layer utilities {
@@ -143,6 +197,45 @@
   
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out;
+  }
+
+  /* Responsive utility classes */
+  .container-responsive {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  .flex-responsive {
+    @apply flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6;
+  }
+
+  .padding-responsive {
+    @apply p-4 sm:p-6 lg:p-8 xl:p-10;
+  }
+
+  .margin-responsive {
+    @apply m-4 sm:m-6 lg:m-8 xl:m-10;
+  }
+
+  /* Mobile-first responsive breakpoints */
+  .mobile-only {
+    @apply block sm:hidden;
+  }
+
+  .tablet-up {
+    @apply hidden sm:block;
+  }
+
+  .desktop-up {
+    @apply hidden lg:block;
+  }
+
+  /* Improved responsive navigation */
+  .nav-responsive {
+    @apply flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6;
   }
   
   @keyframes fadeInUp {
@@ -275,6 +368,47 @@
     }
     50% {
       filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.6));
+    }
+  }
+
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 640px) {
+    .container {
+      @apply px-3;
+    }
+    
+    .text-4xl {
+      @apply text-2xl;
+    }
+    
+    .text-3xl {
+      @apply text-xl;
+    }
+    
+    .py-20 {
+      @apply py-12;
+    }
+    
+    .py-16 {
+      @apply py-10;
+    }
+    
+    .mb-16 {
+      @apply mb-10;
+    }
+    
+    .mb-12 {
+      @apply mb-8;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lg\:grid-cols-3 {
+      @apply grid-cols-1;
+    }
+    
+    .lg\:grid-cols-4 {
+      @apply grid-cols-2;
     }
   }
 }

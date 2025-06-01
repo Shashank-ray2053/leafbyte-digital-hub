@@ -138,9 +138,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-2">Visit Us</h3>
                     <p className="text-gray-600">
-                      123 Tech Boulevard<br />
-                      Innovation District<br />
-                      Digital City, DC 12345
+                      Thamel, Kathmandu<br />
+                      Nepal<br />
+                      44600
                     </p>
                   </div>
                 </div>

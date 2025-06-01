@@ -1,3 +1,4 @@
+
 import React from 'react';
 const Footer = () => {
   const services = [{
@@ -51,14 +52,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
             <div className="flex items-center mb-6">
-              <img alt="Leafbyte Technology" className="h-16 w-auto filter drop-shadow-lg mr-4" src="/lovable-uploads/d6fd25ea-52b1-41ed-9f9d-bf985b747925.png" />
-              <h2 className="text-3xl font-bold text-white">Leafbyte Technology</h2>
+              <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg mr-3" src="/leafbyte-uploads/e4c17fc9-b843-4261-aa22-2d49a1cf4a79.png" />
+              <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Premier Technology Solutions Provider serving businesses from startups to Fortune 500 companies. 
-              We deliver cutting-edge digital transformation services, enterprise-grade security solutions, and 
-              scalable cloud infrastructure that drives measurable business growth and operational excellence 
-              across local and international markets.
+              Leading Technology Solutions Provider delivering cutting-edge digital transformation services to businesses across Nepal and globally. We specialize in enterprise software development, cybersecurity solutions, and scalable cloud infrastructure that drives measurable business growth and operational excellence.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
