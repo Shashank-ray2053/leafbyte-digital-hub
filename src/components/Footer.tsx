@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Footer = () => {
   const [isEditingAddress, setIsEditingAddress] = useState(false);
   const [address, setAddress] = useState({
+    street: 'Thamel',
     city: 'Kathmandu',
     country: 'Nepal',
     postalCode: '44600'
@@ -64,16 +65,12 @@ const Footer = () => {
               <img 
                 alt="Leafbyte Technology" 
                 className="h-12 w-auto filter drop-shadow-lg mr-3" 
-                src="/leafbyte-uploads/e4c17fc9-b843-4261-aa22-2d49a1cf4a79.png"
-                onError={(e) => {
-                  // Fallback to the correct path if the image fails to load
-                  e.currentTarget.src = "/lovable-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png";
-                }}
+                src="/lovable-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png"
               />
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Leading Technology Solutions Provider delivering cutting-edge digital transformation services to businesses across Nepal and globally. We specialize in enterprise software development, cybersecurity solutions, and scalable cloud infrastructure that drives measurable business growth and operational excellence.
+              Premier technology solutions provider delivering enterprise-grade software development, cutting-edge cybersecurity, and comprehensive digital transformation services. Trusted by businesses across Nepal and internationally for scalable, innovative technology solutions.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
@@ -128,6 +125,13 @@ const Footer = () => {
                 <div className="space-y-3">
                   <input
                     type="text"
+                    value={address.street}
+                    onChange={(e) => handleAddressChange('street', e.target.value)}
+                    className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:border-green-400 focus:outline-none"
+                    placeholder="Street"
+                  />
+                  <input
+                    type="text"
                     value={address.city}
                     onChange={(e) => handleAddressChange('city', e.target.value)}
                     className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:border-green-400 focus:outline-none"
@@ -156,6 +160,7 @@ const Footer = () => {
                 </div>
               ) : (
                 <div className="text-gray-400">
+                  <p>{address.street}</p>
                   <p>{address.city}</p>
                   <p>{address.country}</p>
                   <p>{address.postalCode}</p>
