@@ -1,14 +1,7 @@
+
 import React, { useState } from 'react';
 
 const Footer = () => {
-  const [isEditingAddress, setIsEditingAddress] = useState(false);
-  const [address, setAddress] = useState({
-    street: 'Thamel',
-    city: 'Kathmandu',
-    country: 'Nepal',
-    postalCode: '44600'
-  });
-
   const services = [
     { name: 'Enterprise Software Development', href: '#services' },
     { name: 'DevOps & Cloud Solutions', href: '#services' },
@@ -31,24 +24,6 @@ const Footer = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const handleAddressChange = (field: string, value: string) => {
-    setAddress(prev => ({ ...prev, [field]: value }));
-  };
-
-  const handleSaveAddress = () => {
-    setIsEditingAddress(false);
-    // Here you could save to localStorage or send to an API
-    localStorage.setItem('companyAddress', JSON.stringify(address));
-  };
-
-  // Load address from localStorage on component mount
-  React.useEffect(() => {
-    const savedAddress = localStorage.getItem('companyAddress');
-    if (savedAddress) {
-      setAddress(JSON.parse(savedAddress));
-    }
-  }, []);
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
@@ -111,61 +86,12 @@ const Footer = () => {
             </ul>
             
             <div className="mt-8">
-              <div className="flex items-center justify-between mb-4">
-                <h4 className="text-lg font-semibold text-green-400">Visit Us</h4>
-                <button
-                  onClick={() => setIsEditingAddress(!isEditingAddress)}
-                  className="text-sm text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  {isEditingAddress ? 'Cancel' : 'Edit'}
-                </button>
+              <h4 className="text-lg font-semibold text-green-400 mb-4">Visit Us</h4>
+              <div className="text-gray-400">
+                <p>Kathmandu</p>
+                <p>Nepal</p>
+                <p>44600</p>
               </div>
-              
-              {isEditingAddress ? (
-                <div className="space-y-3">
-                  <input
-                    type="text"
-                    value={address.street}
-                    onChange={(e) => handleAddressChange('street', e.target.value)}
-                    className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:border-green-400 focus:outline-none"
-                    placeholder="Street"
-                  />
-                  <input
-                    type="text"
-                    value={address.city}
-                    onChange={(e) => handleAddressChange('city', e.target.value)}
-                    className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:border-green-400 focus:outline-none"
-                    placeholder="City"
-                  />
-                  <input
-                    type="text"
-                    value={address.country}
-                    onChange={(e) => handleAddressChange('country', e.target.value)}
-                    className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:border-green-400 focus:outline-none"
-                    placeholder="Country"
-                  />
-                  <input
-                    type="text"
-                    value={address.postalCode}
-                    onChange={(e) => handleAddressChange('postalCode', e.target.value)}
-                    className="w-full px-3 py-2 bg-gray-800 text-white rounded border border-gray-600 focus:border-green-400 focus:outline-none"
-                    placeholder="Postal Code"
-                  />
-                  <button
-                    onClick={handleSaveAddress}
-                    className="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
-                  >
-                    Save
-                  </button>
-                </div>
-              ) : (
-                <div className="text-gray-400">
-                  <p>{address.street}</p>
-                  <p>{address.city}</p>
-                  <p>{address.country}</p>
-                  <p>{address.postalCode}</p>
-                </div>
-              )}
             </div>
           </div>
         </div>

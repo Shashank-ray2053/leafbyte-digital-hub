@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,6 +9,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from '
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useContactModal } from '@/hooks/useContactModal';
+
 const ContactModal = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,26 +18,50 @@ const ContactModal = () => {
     service: '',
     message: ''
   });
-  const {
-    toast
-  } = useToast();
-  const {
-    isOpen,
-    closeModal
-  } = useContactModal();
+
+  const [isEditingAddress, setIsEditingAddress] = useState(false);
+  const [address, setAddress] = useState({
+    street: 'Kathmandu',
+    city: 'Nepal',
+    postalCode: '44600'
+  });
+
+  const { toast } = useToast();
+  const { isOpen, closeModal } = useContactModal();
+
   const services = ['Software Development', 'DevOps Solutions', 'Cloud Management', 'Cybersecurity Services', 'IT & Infrastructure Management', 'Network Management', 'General Inquiry'];
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleServiceChange = (value: string) => {
     setFormData({
       ...formData,
       service: value
     });
   };
+
+  const handleAddressChange = (field: string, value: string) => {
+    setAddress(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSaveAddress = () => {
+    setIsEditingAddress(false);
+    localStorage.setItem('contactAddress', JSON.stringify(address));
+  };
+
+  // Load address from localStorage on component mount
+  React.useEffect(() => {
+    const savedAddress = localStorage.getItem('contactAddress');
+    if (savedAddress) {
+      setAddress(JSON.parse(savedAddress));
+    }
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
@@ -64,7 +90,9 @@ const ContactModal = () => {
     });
     closeModal();
   };
-  return <Sheet open={isOpen} onOpenChange={closeModal}>
+
+  return (
+    <Sheet open={isOpen} onOpenChange={closeModal}>
       <SheetContent side="right" className="w-full sm:max-w-2xl overflow-y-auto bg-gradient-to-br from-green-50/90 via-emerald-50/90 to-teal-50/90 backdrop-blur-md">
         <SheetHeader className="mb-6">
           <SheetTitle className="text-2xl font-bold text-gray-800 flex items-center gap-2">
@@ -111,9 +139,11 @@ const ContactModal = () => {
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
-                      {services.map(service => <SelectItem key={service} value={service}>
+                      {services.map(service => (
+                        <SelectItem key={service} value={service}>
                           {service}
-                        </SelectItem>)}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
@@ -168,13 +198,54 @@ const ContactModal = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">Visit Us</h3>
-                  <p className="text-sm text-gray-600">
-                    Thamel, Kathmandu<br />
-                    Nepal<br />
-                    44600
-                  </p>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-semibold text-gray-800">Visit Us</h3>
+                    <button
+                      onClick={() => setIsEditingAddress(!isEditingAddress)}
+                      className="text-sm text-gray-400 hover:text-green-400 transition-colors"
+                    >
+                      {isEditingAddress ? 'Cancel' : 'Edit'}
+                    </button>
+                  </div>
+                  
+                  {isEditingAddress ? (
+                    <div className="space-y-3">
+                      <input
+                        type="text"
+                        value={address.street}
+                        onChange={(e) => handleAddressChange('street', e.target.value)}
+                        className="w-full px-3 py-2 bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-green-400 focus:outline-none"
+                        placeholder="Street/Area"
+                      />
+                      <input
+                        type="text"
+                        value={address.city}
+                        onChange={(e) => handleAddressChange('city', e.target.value)}
+                        className="w-full px-3 py-2 bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-green-400 focus:outline-none"
+                        placeholder="City/Country"
+                      />
+                      <input
+                        type="text"
+                        value={address.postalCode}
+                        onChange={(e) => handleAddressChange('postalCode', e.target.value)}
+                        className="w-full px-3 py-2 bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-green-400 focus:outline-none"
+                        placeholder="Postal Code"
+                      />
+                      <button
+                        onClick={handleSaveAddress}
+                        className="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-600">
+                      <p>{address.street}</p>
+                      <p>{address.city}</p>
+                      <p>{address.postalCode}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>
@@ -210,6 +281,8 @@ const ContactModal = () => {
           </Card>
         </div>
       </SheetContent>
-    </Sheet>;
+    </Sheet>
+  );
 };
+
 export default ContactModal;
