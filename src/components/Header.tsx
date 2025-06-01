@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -34,13 +33,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${
       isScrolled 
         ? 'bg-gradient-to-r from-green-50/95 via-emerald-50/95 to-lime-50/95 backdrop-blur-md shadow-2xl border-b border-green-200' 
         : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-36">
+        <div className="flex justify-between items-center h-20 md:h-24 lg:h-28">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center group cursor-pointer animate-float" onClick={() => handleNavClick('#home')}>
               <div className="relative">

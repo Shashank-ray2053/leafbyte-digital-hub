@@ -95,13 +95,24 @@
     background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f7fee7 100%);
   }
 
-  /* Enhanced responsive design */
   html {
     scroll-behavior: smooth;
   }
 
-  /* Responsive text scaling */
+  /* Enhanced mobile responsiveness */
   @screen xs {
+    .text-responsive-lg {
+      @apply text-xl;
+    }
+    .text-responsive-xl {
+      @apply text-2xl;
+    }
+    .text-responsive-2xl {
+      @apply text-3xl;
+    }
+  }
+
+  @screen sm {
     .text-responsive-lg {
       @apply text-2xl;
     }
@@ -113,7 +124,7 @@
     }
   }
 
-  @screen sm {
+  @screen md {
     .text-responsive-lg {
       @apply text-3xl;
     }
@@ -125,7 +136,7 @@
     }
   }
 
-  @screen md {
+  @screen lg {
     .text-responsive-lg {
       @apply text-4xl;
     }
@@ -137,15 +148,20 @@
     }
   }
 
+  /* Fix header overlap issues */
+  .header-offset {
+    padding-top: 6rem;
+  }
+
+  @screen md {
+    .header-offset {
+      padding-top: 7rem;
+    }
+  }
+
   @screen lg {
-    .text-responsive-lg {
-      @apply text-5xl;
-    }
-    .text-responsive-xl {
-      @apply text-6xl;
-    }
-    .text-responsive-2xl {
-      @apply text-7xl;
+    .header-offset {
+      padding-top: 8rem;
     }
   }
 }
@@ -377,12 +393,20 @@
       @apply px-3;
     }
     
-    .text-4xl {
+    .text-6xl, .text-7xl, .text-8xl {
+      @apply text-3xl;
+    }
+    
+    .text-4xl, .text-5xl {
       @apply text-2xl;
     }
     
     .text-3xl {
       @apply text-xl;
+    }
+    
+    .text-2xl {
+      @apply text-lg;
     }
     
     .py-20 {
@@ -400,6 +424,14 @@
     .mb-12 {
       @apply mb-8;
     }
+
+    .px-10 {
+      @apply px-6;
+    }
+
+    .py-4 {
+      @apply py-3;
+    }
   }
 
   @media (max-width: 768px) {
@@ -410,5 +442,27 @@
     .lg\:grid-cols-4 {
       @apply grid-cols-2;
     }
+
+    .md\:text-6xl {
+      @apply text-4xl;
+    }
+
+    .md\:text-8xl {
+      @apply text-5xl;
+    }
+  }
+
+  /* Better image handling */
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  /* Ensure proper z-index layering */
+  .z-header {
+    z-index: 100;
+  }
+
+  .z-hero {
+    z-index: 10;
   }
 }
