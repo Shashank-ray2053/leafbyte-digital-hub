@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 const Footer = () => {
   const services = [{
@@ -20,14 +21,14 @@ const Footer = () => {
     href: '#services'
   }];
   const company = [{
-    name: 'About Us',
+    name: 'Home',
+    href: '#home'
+  }, {
+    name: 'About',
     href: '#about'
   }, {
-    name: 'Our Team',
-    href: '#about'
-  }, {
-    name: 'Blog',
-    href: '#blog'
+    name: 'Services',
+    href: '#services'
   }, {
     name: 'Contact',
     href: '#home'
@@ -57,6 +58,26 @@ const Footer = () => {
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Premier technology solutions provider delivering enterprise-grade software development, cutting-edge cybersecurity, and comprehensive digital transformation services. Trusted by businesses across Nepal and internationally for scalable, innovative technology solutions.
             </p>
+            
+            {/* Contact Information */}
+            <div className="mb-6 space-y-3">
+              <div className="text-gray-300">
+                <h4 className="text-green-400 font-semibold mb-2">Contact Information</h4>
+                <p className="flex items-center gap-2">
+                  <span className="text-green-400">📍</span>
+                  Kathmandu, Nepal
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-green-400">📞</span>
+                  +977-123-456-7890
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-green-400">✉️</span>
+                  info@leafbytetech.com
+                </p>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
                 LinkedIn
@@ -90,15 +111,6 @@ const Footer = () => {
                   </button>
                 </li>)}
             </ul>
-            
-            <div className="mt-8">
-              
-              <div className="text-gray-400">
-                
-                
-                
-              </div>
-            </div>
           </div>
         </div>
 
