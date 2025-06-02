@@ -1,32 +1,46 @@
-
 import React, { useState } from 'react';
-
 const Footer = () => {
-  const services = [
-    { name: 'Enterprise Software Development', href: '#services' },
-    { name: 'DevOps & Cloud Solutions', href: '#services' },
-    { name: 'Cloud Infrastructure Management', href: '#services' },
-    { name: 'Cybersecurity Services', href: '#services' },
-    { name: 'IT Infrastructure Solutions', href: '#services' },
-    { name: 'Network Architecture & Security', href: '#services' }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Team', href: '#about' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#home' }
-  ];
-
+  const services = [{
+    name: 'Enterprise Software Development',
+    href: '#services'
+  }, {
+    name: 'DevOps & Cloud Solutions',
+    href: '#services'
+  }, {
+    name: 'Cloud Infrastructure Management',
+    href: '#services'
+  }, {
+    name: 'Cybersecurity Services',
+    href: '#services'
+  }, {
+    name: 'IT Infrastructure Solutions',
+    href: '#services'
+  }, {
+    name: 'Network Architecture & Security',
+    href: '#services'
+  }];
+  const company = [{
+    name: 'About Us',
+    href: '#about'
+  }, {
+    name: 'Our Team',
+    href: '#about'
+  }, {
+    name: 'Blog',
+    href: '#blog'
+  }, {
+    name: 'Contact',
+    href: '#home'
+  }];
   const handleLinkClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
+  return <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-green-500/10 rounded-full blur-3xl animate-float"></div>
@@ -37,11 +51,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
             <div className="flex items-center mb-6">
-              <img 
-                alt="Leafbyte Technology" 
-                className="h-12 w-auto filter drop-shadow-lg mr-3" 
-                src="/lovable-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png"
-              />
+              <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg mr-3" src="/lovable-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
@@ -63,34 +73,30 @@ const Footer = () => {
           <div className="animate-slide-in">
             <h4 className="text-lg font-semibold mb-6 text-green-400">Enterprise Solutions</h4>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
+              {services.map((service, index) => <li key={index}>
                   <button onClick={() => handleLinkClick(service.href)} className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:translate-x-2 transform block text-left">
                     {service.name}
                   </button>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
           <div className="animate-slide-in animation-delay-1000">
             <h4 className="text-lg font-semibold mb-6 text-green-400">Company</h4>
             <ul className="space-y-3">
-              {company.map((item, index) => (
-                <li key={index}>
+              {company.map((item, index) => <li key={index}>
                   <button onClick={() => handleLinkClick(item.href)} className="text-gray-400 hover:text-green-400 transition-all duration-300 hover:translate-x-2 transform block text-left">
                     {item.name}
                   </button>
-                </li>
-              ))}
+                </li>)}
             </ul>
             
             <div className="mt-8">
-              <h4 className="text-lg font-semibold text-green-400 mb-4">Visit Us</h4>
+              
               <div className="text-gray-400">
-                <p>Kathmandu</p>
-                <p>Nepal</p>
-                <p>44600</p>
+                
+                
+                
               </div>
             </div>
           </div>
@@ -112,8 +118,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
