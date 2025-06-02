@@ -38,7 +38,7 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
 
   return (
     <Sheet open={isOpen} onOpenChange={handleOpenChange}>
-      <SheetContent side="right" className="w-full sm:max-w-3xl overflow-y-auto bg-gradient-to-br from-emerald-50/90 via-teal-50/90 to-green-50/90 backdrop-blur-md">
+      <SheetContent side="right" className="w-full sm:max-w-3xl overflow-y-auto bg-gradient-to-br from-emerald-50/90 via-teal-50/90 to-green-50/90 backdrop-blur-md z-[200]">
         <SheetHeader className="mb-6">
           <div className="flex justify-between items-start">
             <div className="flex-1">
