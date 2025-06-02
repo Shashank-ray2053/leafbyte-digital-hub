@@ -30,17 +30,36 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ isOpen, onClose, service })
     openModal();
   };
 
+  const handleOpenChange = (open: boolean) => {
+    if (!open) {
+      onClose();
+    }
+  };
+
   return (
-    <Sheet open={isOpen} onOpenChange={onClose}>
+    <Sheet open={isOpen} onOpenChange={handleOpenChange}>
       <SheetContent side="right" className="w-full sm:max-w-3xl overflow-y-auto bg-gradient-to-br from-emerald-50/90 via-teal-50/90 to-green-50/90 backdrop-blur-md">
         <SheetHeader className="mb-6">
-          <SheetTitle className="text-3xl font-bold text-gray-800 flex items-center gap-3">
-            <div className="text-4xl">{service.icon}</div>
-            {service.title}
-          </SheetTitle>
-          <SheetDescription className="text-lg text-gray-600">
-            {service.description}
-          </SheetDescription>
+          <div className="flex justify-between items-start">
+            <div className="flex-1">
+              <SheetTitle className="text-3xl font-bold text-gray-800 flex items-center gap-3">
+                <div className="text-4xl">{service.icon}</div>
+                {service.title}
+              </SheetTitle>
+              <SheetDescription className="text-lg text-gray-600 mt-2">
+                {service.description}
+              </SheetDescription>
+            </div>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onClose}
+              className="h-8 w-8 p-0 hover:bg-gray-200/50"
+            >
+              <X className="h-4 w-4" />
+              <span className="sr-only">Close</span>
+            </Button>
+          </div>
         </SheetHeader>
 
         <div className="space-y-8">
