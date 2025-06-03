@@ -24,11 +24,11 @@ const Footer = () => {
     name: 'Home',
     href: '#home'
   }, {
-    name: 'About',
-    href: '#about'
-  }, {
     name: 'Services',
     href: '#services'
+  }, {
+    name: 'About',
+    href: '#about'
   }, {
     name: 'Contact',
     href: '#home'
@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
             <div className="flex items-center mb-6">
-              <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg mr-3" src="/lovable-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
+              <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg mr-3" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
