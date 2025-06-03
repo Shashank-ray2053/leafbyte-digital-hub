@@ -44,7 +44,7 @@ const Header = () => {
             <div className="flex-shrink-0 flex items-center group cursor-pointer animate-float" onClick={() => handleNavClick('#home')}>
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
+                  src="/leafbyte-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                   alt="Leafbyte Technology" 
                   className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-125 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl"
                 />
