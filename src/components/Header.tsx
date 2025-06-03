@@ -40,13 +40,13 @@ const Header = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20 lg:h-24">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center group cursor-pointer animate-float" onClick={() => handleNavClick('#home')}>
-              <div className="relative">
+          <div className="flex items-center overflow-hidden">
+            <div className="flex-shrink-0 flex items-center group cursor-pointer animate-float overflow-hidden py-2" onClick={() => handleNavClick('#home')}>
+              <div className="relative overflow-hidden">
                 <img 
                   src="/leafbyte-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                   alt="Leafbyte Technology" 
-                  className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-110 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl"
+                  className="h-20 md:h-24 lg:h-28 w-auto group-hover:scale-105 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl transform-gpu"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400/40 via-emerald-500/40 to-lime-500/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
               </div>
