@@ -20,8 +20,8 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -39,14 +39,14 @@ const Header = () => {
         : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 md:h-24 lg:h-28">
+        <div className="flex justify-between items-center h-16 md:h-20 lg:h-24">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center group cursor-pointer animate-float" onClick={() => handleNavClick('#home')}>
               <div className="relative">
                 <img 
                   src="/lovable-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                   alt="Leafbyte Technology" 
-                  className="h-40 w-auto group-hover:scale-125 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl"
+                  className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-125 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400/40 via-emerald-500/40 to-lime-500/40 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
               </div>
