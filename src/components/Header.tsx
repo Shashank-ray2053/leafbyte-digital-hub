@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Cloud } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useContactModal } from '@/hooks/useContactModal';
 
 const Header = () => {
@@ -46,13 +46,8 @@ const Header = () => {
                 <img 
                   src="/leafbyte-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                   alt="Leafbyte Technology" 
-                  className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-[1.02] transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl transform-gpu"
+                  className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-110 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl transform-gpu"
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <Cloud className="text-green-400/60 w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 animate-pulse" />
-                  <Cloud className="absolute text-emerald-500/40 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 animate-pulse animation-delay-1000" />
-                  <Cloud className="absolute text-lime-500/30 w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 animate-pulse animation-delay-2000" />
-                </div>
               </div>
             </div>
           </div>
