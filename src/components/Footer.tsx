@@ -51,8 +51,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
-            <div className="flex items-center mb-6">
-              <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg mr-3" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
+            <div className="flex items-center mb-6 relative">
+              {/* Blinking effect background for footer logo */}
+              <div className="relative mr-3">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-emerald-400/30 to-lime-400/30 rounded-full blur-lg animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-lime-500/20 rounded-full blur-md animate-pulse animation-delay-1000"></div>
+                <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg relative z-10" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
+              </div>
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
