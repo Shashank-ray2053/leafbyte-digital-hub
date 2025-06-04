@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -43,13 +42,10 @@ const Header = () => {
           <div className="flex items-center overflow-hidden">
             <div className="flex-shrink-0 flex items-center group cursor-pointer animate-float overflow-hidden py-2 relative" onClick={() => handleNavClick('#home')}>
               <div className="relative overflow-hidden">
-                {/* Blinking effect background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-emerald-400/30 to-lime-400/30 rounded-full blur-xl animate-pulse"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-lime-500/20 rounded-full blur-lg animate-pulse animation-delay-1000"></div>
                 <img 
                   src="/leafbyte-uploads/37345126-e659-43bc-92bb-ef6a37d5844d.png" 
                   alt="Leafbyte Technology" 
-                  className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-110 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl transform-gpu relative z-10"
+                  className="h-24 md:h-32 lg:h-40 w-auto group-hover:scale-110 transition-all duration-500 filter drop-shadow-2xl hover:drop-shadow-3xl transform-gpu"
                 />
               </div>
             </div>
