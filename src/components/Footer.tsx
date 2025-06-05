@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const Footer = () => {
@@ -97,15 +98,31 @@ If you have any questions about this policy or your personal data, reach out to 
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+        {/* Privacy Policy Section */}
+        {showPrivacyPolicy && (
+          <div className="mb-12 bg-gradient-to-br from-gray-800/80 via-green-800/80 to-emerald-800/80 rounded-xl p-6 border border-green-400/30 backdrop-blur-sm">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center">
+                <img alt="Leafbyte Technology" className="h-10 w-auto mr-3" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
+                <h2 className="text-2xl font-bold text-green-400">Privacy Policy</h2>
+              </div>
+              <button 
+                onClick={() => setShowPrivacyPolicy(false)}
+                className="text-gray-400 hover:text-white transition-colors text-2xl"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="text-gray-300 whitespace-pre-line leading-relaxed max-h-96 overflow-y-auto">
+              {privacyPolicyContent}
+            </div>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2 animate-fade-in">
             <div className="flex items-center mb-6 relative">
-              {/* Blinking effect background for footer logo */}
-              <div className="relative mr-3">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-emerald-400/30 to-lime-400/30 rounded-full blur-lg animate-pulse"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-lime-500/20 rounded-full blur-md animate-pulse animation-delay-1000"></div>
-                <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg relative z-10" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
-              </div>
+              <img alt="Leafbyte Technology" className="h-12 w-auto filter drop-shadow-lg mr-3" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
             
@@ -174,8 +191,8 @@ If you have any questions about this policy or your personal data, reach out to 
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <button 
-                onClick={() => setShowPrivacyPolicy(true)} 
-                className="text-gray-400 hover:text-green-400 text-sm transition-all duration-300 hover:scale-105 animate-pulse hover:animate-none"
+                onClick={() => setShowPrivacyPolicy(!showPrivacyPolicy)} 
+                className="text-gray-400 hover:text-green-400 text-sm transition-all duration-300 hover:scale-105"
               >
                 Privacy Policy
               </button>
@@ -183,33 +200,6 @@ If you have any questions about this policy or your personal data, reach out to 
           </div>
         </div>
       </div>
-
-      {/* Privacy Policy Modal */}
-      {showPrivacyPolicy && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 rounded-xl p-6 max-w-4xl max-h-[80vh] overflow-y-auto relative border border-green-400/30">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center">
-                <div className="relative mr-3">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-emerald-400/30 to-lime-400/30 rounded-full blur-lg animate-pulse"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-lime-500/20 rounded-full blur-md animate-pulse animation-delay-1000"></div>
-                  <img alt="Leafbyte Technology" className="h-10 w-auto filter drop-shadow-lg relative z-10" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
-                </div>
-                <h2 className="text-2xl font-bold text-green-400">Privacy Policy</h2>
-              </div>
-              <button 
-                onClick={() => setShowPrivacyPolicy(false)}
-                className="text-gray-400 hover:text-white transition-colors text-2xl"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="text-gray-300 whitespace-pre-line leading-relaxed">
-              {privacyPolicyContent}
-            </div>
-          </div>
-        </div>
-      )}
     </footer>
   );
 };
