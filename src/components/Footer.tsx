@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const Footer = () => {
@@ -89,7 +88,8 @@ We may revise this policy when needed. The latest version will always be availab
 11. Contact Us
 If you have any questions about this policy or your personal data, reach out to us.`;
 
-  return <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
+  return (
+    <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-green-500/10 rounded-full blur-3xl animate-float"></div>
@@ -108,11 +108,11 @@ If you have any questions about this policy or your personal data, reach out to 
               </div>
               <h2 className="text-2xl font-bold text-white">Leafbyte Technology</h2>
             </div>
+            
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Premier technology solutions provider delivering enterprise-grade software development, cutting-edge cybersecurity, and comprehensive digital transformation services. Trusted by businesses across Nepal and internationally for scalable, innovative technology solutions.
             </p>
             
-            {/* Contact Information */}
             <div className="mb-6 space-y-3">
               <div className="text-gray-300">
                 <h4 className="text-green-400 font-semibold mb-2">Contact Information</h4>
@@ -175,7 +175,7 @@ If you have any questions about this policy or your personal data, reach out to 
             <div className="flex space-x-6 mt-4 md:mt-0">
               <button 
                 onClick={() => setShowPrivacyPolicy(true)} 
-                className="text-gray-400 hover:text-green-400 text-sm transition-all duration-300 hover:scale-105"
+                className="text-gray-400 hover:text-green-400 text-sm transition-all duration-300 hover:scale-105 animate-pulse hover:animate-none"
               >
                 Privacy Policy
               </button>
@@ -188,20 +188,30 @@ If you have any questions about this policy or your personal data, reach out to 
       {showPrivacyPolicy && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 rounded-xl p-6 max-w-4xl max-h-[80vh] overflow-y-auto relative border border-green-400/30">
-            <button 
-              onClick={() => setShowPrivacyPolicy(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-2xl"
-            >
-              ✕
-            </button>
-            <h2 className="text-2xl font-bold text-green-400 mb-6">Privacy Policy</h2>
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center">
+                <div className="relative mr-3">
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-emerald-400/30 to-lime-400/30 rounded-full blur-lg animate-pulse"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-lime-500/20 rounded-full blur-md animate-pulse animation-delay-1000"></div>
+                  <img alt="Leafbyte Technology" className="h-10 w-auto filter drop-shadow-lg relative z-10" src="/leafbyte-uploads/ccb3569c-f557-4f9a-8347-f058ac1194ab.png" />
+                </div>
+                <h2 className="text-2xl font-bold text-green-400">Privacy Policy</h2>
+              </div>
+              <button 
+                onClick={() => setShowPrivacyPolicy(false)}
+                className="text-gray-400 hover:text-white transition-colors text-2xl"
+              >
+                ✕
+              </button>
+            </div>
             <div className="text-gray-300 whitespace-pre-line leading-relaxed">
               {privacyPolicyContent}
             </div>
           </div>
         </div>
       )}
-    </footer>;
+    </footer>
+  );
 };
 
 export default Footer;
