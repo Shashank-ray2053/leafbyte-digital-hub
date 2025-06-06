@@ -33,9 +33,6 @@ const Footer = () => {
   }, {
     name: 'About',
     href: '#about'
-  }, {
-    name: 'Contact',
-    href: '#home'
   }];
 
   const handleLinkClick = (href: string) => {
@@ -135,28 +132,26 @@ If you have any questions about this policy or your personal data, reach out to 
                 <h4 className="text-green-400 font-semibold mb-2">Contact Information</h4>
                 <p className="flex items-center gap-2">
                   <span className="text-green-400">📍</span>
-                  Kathmandu, Nepal
+                  Kathmandu, Nepal, 44600
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="text-green-400">📞</span>
-                  +977-123-456-7890
+                  +977-9844418804
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="text-green-400">✉️</span>
-                  info@leafbytetech.com
+                  admin@leafbyte.Ltd
+                </p>
+                 <p className="flex items-center gap-2">
+                  <span className="text-green-400">✉️</span>
+                  support@leafbyte.Ltd
                 </p>
               </div>
             </div>
             
             <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
+              <a href="https://www.linkedin.com/company/leafbyte-technology/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
                 LinkedIn
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
-                Twitter
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-all duration-300 transform hover:scale-110">
-                GitHub
               </a>
             </div>
           </div>
@@ -187,7 +182,7 @@ If you have any questions about this policy or your personal data, reach out to 
         <div className="border-t border-green-800/50 pt-8 mt-12 animate-fade-in">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Leafbyte Technology. All rights reserved. Global Technology Solutions Partner.
+              © 2025 Leafbyte Technology. All rights reserved. Global Technology Solutions Partner.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <button 
